@@ -12,7 +12,7 @@ class Clients(models.Model):
 
 class Auto(models.Model):
     car_model = models.CharField(max_length=100)
-    model_year = models.CharField(max_length=100, null=True)
+    model_year = models.CharField(max_length=4, null=True)
     client = models.ForeignKey(Clients, on_delete=models.PROTECT)
 
     def __str__(self):

@@ -32,7 +32,6 @@ class Order(models.Model):
     type_service = models.ForeignKey(TypeService, on_delete=models.PROTECT)
     date = models.DateTimeField(auto_now_add=True)
 
-    def __str__(self):
-        return self.auto_model
+
 
 

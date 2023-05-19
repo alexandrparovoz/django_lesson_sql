@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>главная страница</title>
-</head>
-<body>
-<h2> Главнейшая страница kjjbkjbkj</h2>
-</body>
-</html>
+{%  extends 'autoservice/base.html' %}
+    {% block title %}Главная стpаница{% endblock %}
+
+{%  block content %}
+<h2>Лист главной страницы</h2>
+<a href="#">Здесь все о нас</a>
+    <!--{% for i in posts %}
+        <li><div class="article-panel">
+         <p class="first">Категория: {{i.cat.name}}</p>
+        </div>
+        {% if i.photo %}
+         <p><img class="img-article-left thumb" src="{{i.photo.url}}"></p>
+        {% endif %}
+    <p>{{ i.title}}</p>
+    <p>{{ i.content|truncatewords:20 }}</p> --> <!--обрубил текст -->
+        <div class="clear"></div>
+			<p class="link-read-post"><a href="#">Читать весь пост</a></p>
+    {% endfor %}
+{%  endblock %}

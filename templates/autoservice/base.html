@@ -3,9 +3,9 @@
 <html>
 <head>
 	<title>{%  block title %}{% endblock %}</title>
-	<link type="text/css" href="{% static 'autoservice/scc/autoservice.css' %}" rel="stylesheet" />
+	<link type="text/css" href="{% static 'autoservice/css/autoservice.css' %}" rel="stylesheet" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel="shortcut icon" href="" type="image/x-icon"/>
+	<link rel="shortcut icon" href="#" type="image/x-icon"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -14,12 +14,12 @@
 <!-- блок mainmenu -->
 		<div class="header">
 			<ul id="mainmenu" class="mainmenu">
-			<li class="logo"><a href="{%  url 'home' %}"><div class="logo"></div></a></li>
-		<!--	<li><a href="{%  url 'about' %}">Контакты</a></li>
-                <li class="last"><a href="{% url 'register' %}">Зарегистрироваться</a> | <a href="{%  url 'login' %}">Ворваться</a></li>
-                <li class="last"><a href="{%  url 'add_page' %}">Добавить статью</a></li>
-                <li class="last"><a href="{% url 'gallery' %}">Галерея</a></li>
-			<li class="last"><a href="{%  url 'home' %}">Главная</a></li> -->
+			<li class="logo"><a href="#"><div class="logo"></div></a></li>
+			<li><a href="#">Контакты</a></li>
+                <li class="last"><a href="#">Зарегистрироваться</a> | <a href="#">Ворваться</a></li>
+                <li class="last"><a href="#">Добавить статью</a></li>
+                <li class="last"><a href="#">Галерея</a></li>
+			<li class="last"><a href="#">Главная</a></li>
 			</ul>
 			<div class="clear"></div>
 		</div>
@@ -32,22 +32,11 @@
 	<td valign="top" class="left-chapters">
 	<ul id="leftchapters">
     <!-- здесь категории -->
-    {% if cat_selected == 0 %}
-        <li class="selected">Все категории</li> <!-- если селект==0 то кнопка не активна-->
-    {% else %}
-        <li><a href="{% url 'home' %}">Все категории</a></li><!-- если селект не 0. то кнопка активна -->
-    {% endif %}
-    <!-- здесь перебираем все категории -->
-    {% for c in cats %}
-         {% if c.pk == cat_selected %}
-             <li class="selected">{{c.name}}</li>
-         {% else %}
-             <li><a href="{{ c.get_absolute_url }}">{{c.name}}</a></li>
-         {% endif %}
-    {% endfor %}
-		<!--<li><a href="#">Бороды</a></li>
-		<li><a href="#">Усы</a></li>
-		<li><a href="#">Шевелюры</a></li> -->
+        <li><a href="#">Все задачи</a></li>
+		<li><a href="/task_1">Задача 1</a></li>
+        <li><a href="/task_2">Задача 2</a></li>
+		<li><a href="/task_3">Задача 3</a></li>
+        <li><a href="/task_4">Задача 4</a></li>
 		<li class="share">
 		<p>Знакомство с нами</p>
 		<a class="share-yt" href="#" target="_blank" rel="nofollow"></a> <!--Ссылка на ролик -->

@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Task1</title>
-</head>
-<body>
-<h2>TASK  1</h2>
- <ul>
-     {% for res in obj %}
-        <li>
-            First_name{{ res.first_name }}, Clients{{ res.last_name }}, Clients{{ res.city }}
-        </li>
-     {% end for %}
- </ul>
-</body>
-</html>
+{%  extends 'autoservice/base.html' %}
+    {% block title %}Task1{% endblock %}
+
+{%  block content %}
+<h2>TASK 1</h2>
+    <p>
+    <ol>
+    {% for client in clients %}
+    <li>
+        Client:{{ client.last_name }}, City:{{ client.city }}, Total:{{ client.total }}
+    </li>
+    {% endfor %}
+    </ol>
+    </p>
+{% endblock %}

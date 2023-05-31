@@ -1,0 +1,15 @@
+{%  extends 'autoservice/base.html' %}
+    {% block title %}Orders{% endblock %}
+
+{%  block content %}
+<h2>Заказы</h2>
+    <p>
+ <ol>
+     {% for order in orders %}
+        <li>
+            Car_model:{{ order.auto_model }}, Price:{{ order.type_service }}, Date:{{ order.date }}, Total:{{ order.total }}
+        </li>
+     {% endfor %}
+ </ol>
+
+{% endblock %}

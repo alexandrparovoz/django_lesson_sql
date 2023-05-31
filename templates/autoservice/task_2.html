@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Task2</title>
-</head>
-<body>
+{%  extends 'autoservice/base.html' %}
+    {% block title %}Task2{% endblock %}
+
+{%  block content %}
 <h2>TASK 2</h2>
-</body>
-</html>
+    <p>
+    <ol>
+    {% for city in cities %}
+    <li>
+        City:{{ city.city }}, Total:{{ city.total }}, date:{{ city.date }}
+    </li>
+    {% endfor %}
+    </ol>
+    </p>
+{% endblock %}

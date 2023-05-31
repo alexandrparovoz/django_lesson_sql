@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Task3</title>
-</head>
-<body>
-<h2>TASK 3</h2>
-</body>
-</html>
+{%  extends 'autoservice/base.html' %}
+    {% block title %}Task3{% endblock %}
+
+{%  block content %}
+<h2>TASK  3</h2>
+    <p>
+ <ol>
+     {% for auto in autos %}
+        <li>
+            Car_model:{{ auto.car_model }}, Model_year:{{ auto.model_year }}, Price:{{ auto.total }}
+        </li>
+     {% endfor %}
+ </ol>
+    </p>
+    <p>
+    {% for auto in autos %}
+    <li>
+        Car_model:{{ auto.car_model }}, Year_of_model:{{ auto.model_year }}
+    </li>
+    {% endfor %}
+    </p>
+{% endblock %}
